@@ -17,4 +17,20 @@ defmodule AdventOfCode2020Test do
   test "day1_2_result" do
     assert AdventOfCode2020.day1_2() == 67877784
   end
+
+  test "day2_1" do
+    assert AdventOfCode2020.Days.Day2_1.calculate(["1-3 a: abcde", "1-3 b: cdefg", "2-9 c: ccccccccc"]) == 2
+  end
+
+  test "day2_1_result" do
+    assert AdventOfCode2020.day2_1() == 569
+  end
+
+  test "day2_2" do
+    assert AdventOfCode2020.Days.Day2_2.calculate(["1-3 a: abcde", "1-3 b: cdefg", "2-9 c: ccccccccc"]) == 1
+  end
+
+  test "day2_2_result" do
+    assert AdventOfCode2020.day2_2() == 346
+  end
 end
