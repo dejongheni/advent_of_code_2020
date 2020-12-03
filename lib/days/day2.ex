@@ -1,7 +1,12 @@
-defmodule AdventOfCode2020.Days.Day2_2 do
-  def calculate(password_list) do
+defmodule AdventOfCode2020.Days.Day2 do
+  def calculate_part_1(password_list) do
     passwords_to_list_of_infos(password_list)
-    |> Enum.count(&password_valid?/1)
+    |> Enum.count(&password_valid_1?/1)
+  end
+
+  def calculate_part_2(password_list) do
+    passwords_to_list_of_infos(password_list)
+    |> Enum.count(&password_valid_2?/1)
   end
 
   def passwords_to_list_of_infos(password_list) do
@@ -16,7 +21,15 @@ defmodule AdventOfCode2020.Days.Day2_2 do
     end)
   end
 
-  def password_valid?([pos1, pos2, letter, password]) do
+  def password_valid_1?([pos1, pos2, letter, password]) do
+    count_letter_occurences =
+      String.graphemes(password)
+      |> Enum.count(&(&1 == letter))
+    count_letter_occurences in pos1..pos2
+  end
+
+
+  def password_valid_2?([pos1, pos2, letter, password]) do
     string_list = String.graphemes(password)
     char_at_pos1 = Enum.at(string_list, pos1 - 1)
     char_at_pos2 = Enum.at(string_list, pos2 - 1)
