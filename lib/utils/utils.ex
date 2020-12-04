@@ -11,6 +11,10 @@ defmodule AdventOfCode2020.Utils do
     file |> String.trim |> String.split(",")
   end
 
+  def file_to_list_blank_line file do
+    file |> String.trim |> String.split("\n\n")
+  end
+
   def list_of_strings_to_int list do
     list |> Enum.map(fn str -> String.to_integer(str) end)
   end
