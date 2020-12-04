@@ -1,6 +1,6 @@
 # AdventOfCode2020
 
-**TODO: Add description**
+My [advent of code 2020](https://adventofcode.com/2020) in elixir
 
 ## Installation
 

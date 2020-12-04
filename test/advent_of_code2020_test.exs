@@ -83,4 +83,8 @@ defmodule AdventOfCode2020Test do
       "iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719"]
     ) == 4
   end
+
+  test "day4_2_result" do
+    assert AdventOfCode2020.day4_2() == 167
+  end
 end
