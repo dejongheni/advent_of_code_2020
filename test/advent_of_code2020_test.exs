@@ -87,4 +87,28 @@ defmodule AdventOfCode2020Test do
   test "day4_2_result" do
     assert AdventOfCode2020.day4_2() == 167
   end
+
+  test "day5_1_test_1" do
+    assert AdventOfCode2020.Days.Day5.calculate_seat("BFFFBBFRRR") == 567
+  end
+
+  test "day5_1_test_2" do
+    assert AdventOfCode2020.Days.Day5.calculate_seat("FBFBBFFRLR") == 357
+  end
+
+  test "day5_1_test_3" do
+    assert AdventOfCode2020.Days.Day5.calculate_seat("FFFBBBFRRR") == 119
+  end
+
+  test "day5_1_test_4" do
+    assert AdventOfCode2020.Days.Day5.calculate_seat("BBFFBBFRLL") == 820
+  end
+
+  test "day5_1_result" do
+    assert AdventOfCode2020.day5_1() == 848
+  end
+
+  test "day5_2_result" do
+    assert AdventOfCode2020.day5_2() == 682
+  end
 end
