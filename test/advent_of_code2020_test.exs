@@ -111,4 +111,16 @@ defmodule AdventOfCode2020Test do
   test "day5_2_result" do
     assert AdventOfCode2020.day5_2() == 682
   end
+
+  test "day6_1" do
+    assert AdventOfCode2020.Days.Day6.calculate_part_1(
+      ["abc", "a\nb\nc", "ab\nac", "a\na\na\na", "b"]
+    ) == 11
+  end
+
+  test "day6_2" do
+    assert AdventOfCode2020.Days.Day6.calculate_part_2(
+      ["abc", "a\nb\nc", "ab\nac", "a\na\na\na", "b"]
+    ) == 6
+  end
 end
