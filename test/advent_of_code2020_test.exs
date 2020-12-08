@@ -175,4 +175,24 @@ defmodule AdventOfCode2020Test do
       "dark violet bags contain no other bags."]
     ) == 126
   end
+
+  test "day7_2_result" do
+    assert AdventOfCode2020.day7_2() == 30899
+  end
+
+  test "day8_1" do
+    assert AdventOfCode2020.Days.Day8.calculate_part_1("nop +0\nacc +1\njmp +4\nacc +3\njmp -3\nacc -99\nacc +1\njmp -4\nacc +6") == 5
+  end
+
+  test "day8_1_result" do
+    assert AdventOfCode2020.day8_1() == 1782
+  end
+
+  test "day8_2" do
+    assert AdventOfCode2020.Days.Day8.calculate_part_2("nop +0\nacc +1\njmp +4\nacc +3\njmp -3\nacc -99\nacc +1\njmp -4\nacc +6") == 8
+  end
+
+  test "day8_2_result" do
+    assert AdventOfCode2020.day8_2() == 797
+  end
 end

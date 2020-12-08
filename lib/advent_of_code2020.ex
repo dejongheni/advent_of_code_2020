@@ -86,4 +86,14 @@ defmodule AdventOfCode2020 do
     |> file_to_list_break_line()
     |> AdventOfCode2020.Days.Day7.calculate_part_2()
   end
+
+  def day8_1 do
+    read_file("inputs/input_day_8.txt")
+    |> AdventOfCode2020.Days.Day8.calculate_part_1()
+  end
+
+  def day8_2 do
+    read_file("inputs/input_day_8.txt")
+    |> AdventOfCode2020.Days.Day8.calculate_part_2()
+  end
 end
