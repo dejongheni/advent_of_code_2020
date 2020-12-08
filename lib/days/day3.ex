@@ -1,11 +1,18 @@
 defmodule AdventOfCode2020.Days.Day3 do
-  def calculate_part_1(slope) do
-    slope_to_integers(slope)
+  import AdventOfCode2020.Utils
+
+  def calculate_part_1(input) do
+    input
+    |> file_to_list_break_line()
+    |> slope_to_integers()
     |> calculate_tree_encountered(0, 3, 1, 1, 0)
   end
 
-  def calculate_part_2(slope, offset_list) do
-    slope = slope_to_integers(slope)
+  def calculate_part_2(input, offset_list) do
+    slope =
+      input
+      |> file_to_list_break_line()
+      |> slope_to_integers()
     Enum.map(offset_list, fn {offset_right, offset_down} ->
       calculate_tree_encountered(slope, 0, offset_right, offset_down, offset_down, 0)
     end)

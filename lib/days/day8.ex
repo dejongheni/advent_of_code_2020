@@ -1,8 +1,10 @@
 defmodule AdventOfCode2020.Days.Day8 do
+  import AdventOfCode2020.Utils
+
   def calculate_part_1(input) do
     program =
       input
-      |> AdventOfCode2020.Utils.file_to_list_break_line()
+      |> file_to_list_break_line()
       |> parse()
     {res, _, _} = run_program(program, hd(program), 0, 0, [])
     res
@@ -11,7 +13,7 @@ defmodule AdventOfCode2020.Days.Day8 do
   def calculate_part_2(input) do
     program =
       input
-      |> AdventOfCode2020.Utils.file_to_list_break_line()
+      |> file_to_list_break_line()
       |> parse()
     case run_program(program, hd(program), 0, 0, []) do
       {res, _, :ok} -> res

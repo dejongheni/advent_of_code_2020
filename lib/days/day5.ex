@@ -1,11 +1,17 @@
 defmodule AdventOfCode2020.Days.Day5 do
-  def calculate_part_1(list_of_seats) do
-    Enum.map(list_of_seats, fn seat -> calculate_seat(seat) end)
+  import AdventOfCode2020.Utils
+
+  def calculate_part_1(input) do
+    input
+    |> file_to_list_break_line()
+    |> Enum.map(fn seat -> calculate_seat(seat) end)
     |> Enum.max
   end
 
-  def calculate_part_2(list_of_seats) do
-    Enum.map(list_of_seats, fn seat -> calculate_seat(seat) end)
+  def calculate_part_2(input) do
+    input
+    |> file_to_list_break_line()
+    |> Enum.map(fn seat -> calculate_seat(seat) end)
     |> find_free_seat()
   end
 

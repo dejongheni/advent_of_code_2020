@@ -1,4 +1,5 @@
 defmodule AdventOfCode2020.Days.Day4 do
+  import AdventOfCode2020.Utils
   @enforce_keys [:byr, :iyr, :eyr, :hgt, :hcl, :ecl, :pid]
   defstruct [:byr, :iyr, :eyr, :hgt, :hcl, :ecl, :pid, :cid]
 
@@ -13,20 +14,24 @@ defmodule AdventOfCode2020.Days.Day4 do
       pid: 9
     }
 
-  def calculate_part_1(passports) do
-    Enum.map(passports, fn passport ->
-      passport_string_to_map(passport)
-      |> create_struct()
-    end)
+  def calculate_part_1(input) do
+    input
+    |> file_to_list_blank_line()
+    |> Enum.map(fn passport ->
+        passport_string_to_map(passport)
+        |> create_struct()
+      end)
     |> Enum.filter(fn x -> x end)
     |> Enum.count
   end
 
-  def calculate_part_2(passports) do
-    Enum.map(passports, fn passport ->
-      passport_string_to_map(passport)
-      |> create_struct()
-    end)
+  def calculate_part_2(input) do
+    input
+    |> file_to_list_blank_line()
+    |> Enum.map(fn passport ->
+        passport_string_to_map(passport)
+        |> create_struct()
+      end)
     |> Enum.filter(fn x -> validate_passport(x) end)
     |> Enum.count
   end

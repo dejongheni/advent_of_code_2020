@@ -1,11 +1,17 @@
 defmodule AdventOfCode2020.Days.Day2 do
-  def calculate_part_1(password_list) do
-    passwords_to_list_of_infos(password_list)
+  import AdventOfCode2020.Utils
+
+  def calculate_part_1(input) do
+    input
+    |> file_to_list_break_line()
+    |> passwords_to_list_of_infos()
     |> Enum.count(&password_valid_1?/1)
   end
 
-  def calculate_part_2(password_list) do
-    passwords_to_list_of_infos(password_list)
+  def calculate_part_2(input) do
+    input
+    |> file_to_list_break_line()
+    |> passwords_to_list_of_infos()
     |> Enum.count(&password_valid_2?/1)
   end
 

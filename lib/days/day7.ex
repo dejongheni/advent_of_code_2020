@@ -1,11 +1,17 @@
 defmodule AdventOfCode2020.Days.Day7 do
-  def calculate_part_1(list_of_rules) do
-    parse_rules(list_of_rules)
+  import AdventOfCode2020.Utils
+
+  def calculate_part_1(input) do
+    input
+    |> file_to_list_break_line()
+    |> parse_rules()
     |> count_golden()
   end
 
-  def calculate_part_2(list_of_rules) do
-    parse_rules(list_of_rules)
+  def calculate_part_2(input) do
+    input
+    |> file_to_list_break_line()
+    |> parse_rules()
     |> count_golden_content()
   end
 
