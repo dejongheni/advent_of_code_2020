@@ -164,4 +164,20 @@ defmodule AdventOfCode2020Test do
   test "day8_2_result" do
     assert AdventOfCode2020.day8_2() == 797
   end
+
+  test "day9_1" do
+    assert AdventOfCode2020.Days.Day9.calculate_part_1("35\n20\n15\n25\n47\n40\n62\n55\n65\n95\n102\n117\n150\n182\n127\n219\n299\n277\n309\n576", 5) == 127
+  end
+
+  test "day9_1_result" do
+    assert AdventOfCode2020.day9_1() == 138879426
+  end
+
+  test "day9_2" do
+    assert AdventOfCode2020.Days.Day9.calculate_part_2("35\n20\n15\n25\n47\n40\n62\n55\n65\n95\n102\n117\n150\n182\n127\n219\n299\n277\n309\n576", 5) == 62
+  end
+
+  test "day9_2_result" do
+    assert AdventOfCode2020.day9_2() == 23761694
+  end
 end

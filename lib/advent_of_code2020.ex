@@ -32,4 +32,8 @@ defmodule AdventOfCode2020 do
   def day8_1, do: read_file("inputs/input_day_8.txt") |> AdventOfCode2020.Days.Day8.calculate_part_1()
 
   def day8_2, do: read_file("inputs/input_day_8.txt") |> AdventOfCode2020.Days.Day8.calculate_part_2()
+
+  def day9_1, do: read_file("inputs/input_day_9.txt") |> AdventOfCode2020.Days.Day9.calculate_part_1(25)
+
+  def day9_2, do: read_file("inputs/input_day_9.txt") |> AdventOfCode2020.Days.Day9.calculate_part_2(25)
 end
