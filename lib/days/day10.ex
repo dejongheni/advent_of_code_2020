@@ -38,7 +38,9 @@ defmodule AdventOfCode2020.Days.Day10 do
       |> list_of_strings_to_int()
       |> Enum.sort()
     last = List.last(data) + 3
-    {:ok, _} = AdventOfCode2020.Days.Day10.start_link()
+    if !(Process.whereis(__MODULE__)) do
+      {:ok, _} = AdventOfCode2020.Days.Day10.start_link()
+    end
     calculate_combinations([0] ++ data ++ [last], last)
   end
 
