@@ -180,4 +180,20 @@ defmodule AdventOfCode2020Test do
   test "day9_2_result" do
     assert AdventOfCode2020.day9_2() == 23761694
   end
+
+  test "day10_1" do
+    assert AdventOfCode2020.Days.Day10.calculate_part_1("28\n33\n18\n42\n31\n14\n46\n20\n48\n47\n24\n23\n49\n45\n19\n38\n39\n11\n1\n32\n25\n35\n8\n17\n7\n9\n4\n2\n34\n10\n3") == 220
+  end
+
+  test "day10_1_result" do
+    assert AdventOfCode2020.day10_1() == 2738
+  end
+
+  test "day10_2" do
+    assert AdventOfCode2020.Days.Day10.calculate_part_2("28\n33\n18\n42\n31\n14\n46\n20\n48\n47\n24\n23\n49\n45\n19\n38\n39\n11\n1\n32\n25\n35\n8\n17\n7\n9\n4\n2\n34\n10\n3") == 19208
+  end
+
+  test "day10_2_result" do
+    assert AdventOfCode2020.day10_2() == 74049191673856
+  end
 end
