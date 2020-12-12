@@ -212,4 +212,20 @@ defmodule AdventOfCode2020Test do
   test "day11_2_result" do
     assert AdventOfCode2020.day11_2() == 2047
   end
+
+  test "day12_1" do
+    assert AdventOfCode2020.Days.Day12.calculate_part_1("F10\nN3\nF7\nR90\nF11") == 25
+  end
+
+  test "day12_1_result" do
+    assert AdventOfCode2020.day12_1() == 1589
+  end
+
+  test "day12_2" do
+    assert AdventOfCode2020.Days.Day12.calculate_part_2("F10\nN3\nF7\nR90\nF11") == 286
+  end
+
+  test "day12_2_result" do
+    assert AdventOfCode2020.day12_2() == 23960
+  end
 end
